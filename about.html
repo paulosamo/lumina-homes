@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About · Lumina Living</title>
+  <meta name="description" content="The story of Lumina Living, a Kenyan real estate desk that files homes by light, mood, and neighbourhood.">
+  <meta name="theme-color" content="#6d28d9">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,680&family=Outfit:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header" id="site-header"></header>
+  <main id="main">
+    <div class="page-hero">
+      <div class="wrap">
+        <p class="kicker">The studio</p>
+        <h1>A desk that treats house-hunting like a design brief.</h1>
+      </div>
+    </div>
+    <section class="section" style="padding-top: 12px;">
+      <div class="wrap story-grid">
+        <div>
+          <p>Lumina Living started as a notebook of houses Amina Hassan wanted to remember: which rooms held the afternoon, which gardens still smelled of rain, which towers were honest about the service charge.</p>
+          <p>The desk is still small. The live catalogue on this site has <strong id="about-count">thirteen</strong> sample homes, filed by mood as well as by price. Nairobi, the coast, and Nanyuki sit on the same shelf so a family can compare a Karen garden with a Nyali breeze without losing the plot.</p>
+          <p>This website is a front-end demonstration. The homes, prices, and people are sample content. Forms stay in your browser. They do not email a real office.</p>
+        </div>
+        <div class="story-photo" role="img" aria-label="A bright modern house in warm light"></div>
+      </div>
+      <div class="wrap values">
+        <article class="value"><h3>Clear prices</h3><p>Asking figures stay on the card. Extra costs, including stamp duty and legal fees, get named before anyone falls in love with a pool.</p></article>
+        <article class="value"><h3>Local guides</h3><p>The person who shows the house is the person who knows the street. No hand-off to a stranger at the gate.</p></article>
+        <article class="value"><h3>After the offer</h3><p>We stay for the advocate, the valuation, and the small questions that arrive once the excitement cools.</p></article>
+      </div>
+    </section>
+    <section class="section tint-lilac">
+      <div class="wrap story-grid">
+        <div>
+          <p class="kicker">Years</p>
+          <h2>How the desk grew.</h2>
+          <div class="timeline">
+            <article class="timeline-item"><strong>2014</strong><p>A small room in Westlands and a notebook of Karen houses.</p></article>
+            <article class="timeline-item"><strong>2017</strong><p>Grace opens the coast desk in Nyali. Diani follows.</p></article>
+            <article class="timeline-item"><strong>2020</strong><p>Video walks for families buying from another country.</p></article>
+            <article class="timeline-item"><strong>2023</strong><p>Homes filed by mood: garden, city, ocean, highland, family.</p></article>
+            <article class="timeline-item"><strong>2026</strong><p>The colourful desk you are browsing now.</p></article>
+          </div>
+        </div>
+        <div class="cta">
+          <div>
+            <h2>Selling a home?</h2>
+            <p>Send the neighbourhood, a few photos, and the price in your head.</p>
+            <a class="btn" href="contact.html?topic=Sell">Talk to the desk</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer" id="site-footer"></footer>
+  <script src="js/data.js"></script>
+  <script src="js/ui.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      Lumina.mount({ active: "about" });
+      const count = document.getElementById("about-count");
+      if (count) count.textContent = String(LUMINA_DATA.properties.length);
+    });
+  </script>
+</body>
+</html>

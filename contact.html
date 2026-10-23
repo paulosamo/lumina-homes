@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact · Lumina Living</title>
+  <meta name="description" content="Write to the Lumina Living desk in Nairobi or Nyali about buying, renting, or selling.">
+  <meta name="theme-color" content="#6d28d9">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,680&family=Outfit:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <noscript><p class="noscript-banner">Turn on JavaScript to use the contact form.</p></noscript>
+  <header class="site-header" id="site-header"></header>
+  <main id="main">
+    <div class="page-hero">
+      <div class="wrap">
+        <p class="kicker">The desk is open</p>
+        <h1>Tell us the home, or the feeling.</h1>
+        <p>Nairobi on weekdays and Saturday morning. The coast desk keeps Nyali hours. This form stores your note on this browser.</p>
+      </div>
+    </div>
+    <section class="section" style="padding-top: 12px;">
+      <div class="wrap contact-grid">
+        <div id="offices"></div>
+        <form id="contact-form" class="calc-card stack-form" novalidate>
+          <h2>Write to us</h2>
+          <div class="field">
+            <label for="c-name">Name</label>
+            <input id="c-name" autocomplete="name">
+            <small class="error" id="c-name-err"></small>
+          </div>
+          <div class="field">
+            <label for="c-email">Email</label>
+            <input id="c-email" type="email" autocomplete="email">
+            <small class="error" id="c-email-err"></small>
+          </div>
+          <div class="field">
+            <label for="c-phone">Phone</label>
+            <input id="c-phone" type="tel" autocomplete="tel">
+            <small class="error" id="c-phone-err"></small>
+          </div>
+          <div class="field">
+            <label for="c-topic">Topic</label>
+            <select id="c-topic">
+              <option value="Buy">Buy</option>
+              <option value="Rent">Rent</option>
+              <option value="Sell">Sell</option>
+              <option value="General">General</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="c-agent">Guide</label>
+            <select id="c-agent"></select>
+          </div>
+          <div class="field">
+            <label for="c-message">Message</label>
+            <textarea id="c-message" placeholder="We are looking in Lavington, around four bedrooms."></textarea>
+            <small class="error" id="c-message-err"></small>
+          </div>
+          <button class="btn btn-primary" type="submit">Send the note</button>
+        </form>
+      </div>
+    </section>
+    <section class="section tint-peach" style="padding-top: 36px;">
+      <div class="wrap" style="max-width: 800px;">
+        <p class="kicker">Practical</p>
+        <h2>Questions we hear every week.</h2>
+        <div data-faq></div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer" id="site-footer"></footer>
+  <script src="js/data.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>

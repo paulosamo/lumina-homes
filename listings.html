@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Homes · Lumina Living</title>
+  <meta name="description" content="Browse Lumina Living homes for sale and rent. Filter by town, mood, bedrooms, and budget.">
+  <meta name="theme-color" content="#6d28d9">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,680&family=Outfit:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <noscript><p class="noscript-banner">Turn on JavaScript to filter the homes on this desk.</p></noscript>
+  <header class="site-header" id="site-header"></header>
+  <main id="main">
+    <div class="page-hero">
+      <div class="wrap">
+        <p class="kicker">The desk</p>
+        <h1 id="list-heading">Homes with the light on.</h1>
+        <p>Thirteen sample homes across Nairobi, the coast, and Nanyuki. Filter them, save the ones that stay in your head, and compare up to three.</p>
+      </div>
+    </div>
+    <div class="section" style="padding-top: 22px;">
+      <div class="wrap listings-layout">
+        <form id="filters" class="filters" novalidate>
+          <div class="field">
+            <label for="f-q">Search</label>
+            <input id="f-q" type="search" placeholder="Karen, pool, penthouse">
+          </div>
+          <div class="field">
+            <label for="f-status">Offer</label>
+            <select id="f-status">
+              <option value="all">Buy or rent</option>
+              <option value="sale">For sale</option>
+              <option value="rent">For rent</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-type">Type</label>
+            <select id="f-type"></select>
+          </div>
+          <div class="field">
+            <label for="f-city">Town</label>
+            <select id="f-city"></select>
+          </div>
+          <div class="field">
+            <label for="f-mood">Mood</label>
+            <select id="f-mood"></select>
+          </div>
+          <div class="field">
+            <label for="f-beds">Bedrooms</label>
+            <select id="f-beds">
+              <option value="0">Any</option>
+              <option value="1">1+</option>
+              <option value="2">2+</option>
+              <option value="3">3+</option>
+              <option value="4">4+</option>
+              <option value="5">5+</option>
+            </select>
+          </div>
+          <div class="field" id="price-wrap" hidden>
+            <label for="f-price">Budget <span id="price-label">Any price</span></label>
+            <input id="f-price" type="range" min="5000000" max="130000000" step="1000000" value="130000000">
+          </div>
+          <div class="field">
+            <label for="f-sort">Sort</label>
+            <select id="f-sort">
+              <option value="featured">Featured</option>
+              <option value="newest">Newest</option>
+              <option value="price-asc">Price: low to high</option>
+              <option value="price-desc">Price: high to low</option>
+            </select>
+          </div>
+          <button type="button" class="btn btn-ghost" id="clear-filters">Clear filters</button>
+        </form>
+        <div>
+          <div class="results-bar">
+            <h2 id="result-count">Loading homes…</h2>
+          </div>
+          <div class="chip-row" id="active-filters"></div>
+          <div class="card-grid" id="results"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer" id="site-footer"></footer>
+  <script src="js/data.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/listings.js"></script>
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lumina Living — Homes with colour and light</title>
+  <meta name="description" content="Lumina Living is a colourful Kenyan real estate desk. Search homes to buy or rent in Nairobi, on the coast, and in the highlands.">
+  <meta name="theme-color" content="#6d28d9">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,680&family=Outfit:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <noscript><p class="noscript-banner">Turn on JavaScript to search homes, save favourites, and send a viewing request.</p></noscript>
+  <header class="site-header" id="site-header"></header>
+  <main id="main">
+    <section class="hero">
+      <img class="hero-photo" src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=2000&q=80" alt="" fetchpriority="high">
+      <div class="hero-shade"></div>
+      <div class="wrap hero-content">
+        <p class="kicker">Nairobi · Coast · Highlands</p>
+        <h1>Homes with colour, light, and a Sunday worth staying for.</h1>
+        <p class="lede">Lumina Living is a small Kenyan desk. We file houses by mood as well as price, then walk them with you.</p>
+        <form class="search-card" action="listings.html" method="get">
+          <div class="field field-grow">
+            <label for="q">Place or home</label>
+            <input id="q" name="q" type="search" placeholder="Karen, Diani, penthouse">
+          </div>
+          <div class="field">
+            <label for="status">Offer</label>
+            <select id="status" name="status">
+              <option value="all">Buy or rent</option>
+              <option value="sale">Buy</option>
+              <option value="rent">Rent</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="type">Type</label>
+            <select id="type" name="type">
+              <option value="all">Any type</option>
+              <option value="House">House</option>
+              <option value="Villa">Villa</option>
+              <option value="Apartment">Apartment</option>
+              <option value="Townhouse">Townhouse</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="city">Town</label>
+            <select id="city" name="city">
+              <option value="all">Any town</option>
+              <option value="Nairobi">Nairobi</option>
+              <option value="Mombasa">Mombasa</option>
+              <option value="Diani">Diani</option>
+              <option value="Nanyuki">Nanyuki</option>
+            </select>
+          </div>
+          <button class="btn btn-primary" type="submit">Search homes</button>
+        </form>
+        <div class="quick-links">
+          <a href="listings.html?q=Karen">Karen</a>
+          <a href="listings.html?status=rent">For rent</a>
+          <a href="listings.html?mood=ocean">Coast</a>
+          <a href="listings.html?status=sale&amp;priceMax=20000000">Under KES 20M</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="wrap stat-row">
+      <article class="stat"><strong id="stat-homes">13</strong><span>homes on the desk today</span></article>
+      <article class="stat"><strong id="stat-cities">4</strong><span>towns, from Karen to Diani</span></article>
+      <article class="stat"><strong>12</strong><span>years of walking houses</span></article>
+      <article class="stat"><strong>5</strong><span>guides who stay past the offer</span></article>
+    </div>
+
+    <section class="section" id="recent" hidden>
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="kicker">Still open</p>
+            <h2>Pick up where you left off</h2>
+          </div>
+        </div>
+        <div class="card-grid" id="recent-grid"></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="kicker">Search by feeling</p>
+            <h2>Five moods, then the right street.</h2>
+            <p>Start with the light you want. Price and bedrooms come next, not first.</p>
+          </div>
+        </div>
+        <div class="mood-grid" id="mood-grid"></div>
+      </div>
+    </section>
+
+    <section class="section tint-lilac">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="kicker">On the desk</p>
+            <h2>Homes we would walk this week.</h2>
+          </div>
+          <a class="btn btn-ghost" href="listings.html">Browse all homes</a>
+        </div>
+        <div class="home-grid" id="featured-grid"></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="kicker">How a search goes</p>
+            <h2>Three steps, no mystery tour.</h2>
+          </div>
+        </div>
+        <div class="steps">
+          <article class="step"><p class="step-no">01</p><h3>Name the feeling</h3><p>Garden, city, ocean, highland, or a family house with room to grow. Tell us the budget beside it.</p></article>
+          <article class="step"><p class="step-no">02</p><h3>Walk a short list</h3><p>We bring a few homes, not twenty. You compare them here, then see the real light in person or on video.</p></article>
+          <article class="step"><p class="step-no">03</p><h3>Offer with a clear file</h3><p>Your guide stays for the offer, the advocate, and the questions that show up on a Thursday.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tint-mint">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="kicker">Neighbourhoods</p>
+            <h2>Streets we actually know.</h2>
+            <p>Scroll sideways. Each card opens the homes on that street.</p>
+          </div>
+        </div>
+        <div class="hood-scroll" id="hood-scroll"></div>
+      </div>
+    </section>
+
+    <section class="section tint-peach">
+      <div class="wrap calc-grid">
+        <div>
+          <p class="kicker">Sample mortgage</p>
+          <h2>A monthly figure you can hold up to the light.</h2>
+          <p>This is a teaching sum, not a bank offer. Kenyan rates move. Deposits are often 10–30%, and stamp duty sits outside the loan.</p>
+          <p>On a sale listing you will find the same calculator already filled with that home’s asking price.</p>
+        </div>
+        <form id="home-calc" class="calc-card">
+          <label>Sample price (KES)
+            <input data-calc="price" type="number" min="1000000" step="500000" value="25000000">
+          </label>
+          <label>Deposit <strong data-calc="down-label"></strong>
+            <input data-calc="down" type="range" min="10" max="60" step="5" value="20">
+          </label>
+          <label>Sample rate <strong data-calc="rate-label"></strong>
+            <input data-calc="rate" type="range" min="8" max="20" step="0.5" value="14.5">
+          </label>
+          <label>Term <strong data-calc="years-label"></strong>
+            <input data-calc="years" type="range" min="5" max="25" step="1" value="20">
+          </label>
+          <div class="pay-box">
+            <span>Estimated monthly</span>
+            <strong data-calc="out">—</strong>
+            <small data-calc="sub"></small>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="kicker">The guides</p>
+            <h2>People, not a call centre.</h2>
+          </div>
+          <a class="btn btn-ghost" href="agents.html">Meet the desk</a>
+        </div>
+        <div id="agent-preview"></div>
+      </div>
+    </section>
+
+    <section class="section tint-sun">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="kicker">In their words</p>
+            <h2>What clients remember.</h2>
+          </div>
+        </div>
+        <div class="quotes" id="quotes"></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap" style="max-width: 800px;">
+        <div class="section-head">
+          <div>
+            <p class="kicker">Questions</p>
+            <h2>Before you book the car.</h2>
+          </div>
+        </div>
+        <div data-faq="4"></div>
+        <p><a class="text-link" href="contact.html">Read the rest, or write to the desk</a></p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: 0;">
+      <div class="wrap">
+        <div class="cta">
+          <div>
+            <h2>Bring us a Sunday you want more of.</h2>
+            <p>Buy, rent, or ask what a home you already own might welcome.</p>
+          </div>
+          <a class="btn" href="contact.html">Book a viewing</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer" id="site-footer"></footer>
+  <script src="js/data.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>
